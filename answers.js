@@ -77,4 +77,22 @@ var numbers = [3, 75, -42, 9, -904.73];
 
 
 
+// EXERCISE #5
+// Write a function called countVowels that takes a string and returns the number of vowels in the string. You should use Array.prototype.reduce to do your work.
+// Hint: You can use String.prototype.split again. There is a way to use it to split a string by character. Try to Google it :)
+// Hint 2: You can create an array of vowels and use Array.prototype.indexOf to check if the current letter is a vowel.
 
+function countVowels (string){
+    
+    var split = string.split("",string.length)
+    var vowels = split.indexOf('a','e','i','o','u')
+    return vowels.reduce(function(a,b) {
+        if (a >= 0) {
+            return a;
+        } else {
+            return b;
+        }
+        
+    })
+    
+}
